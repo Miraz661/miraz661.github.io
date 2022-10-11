@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: lightgray;
+}
+.container{
+    padding: 100px 0px;
+}
+details p span{
+    display: block;
+}
+
+                            /* Nav bar styling start here */
+
+
+.navigation{
+    position: fixed;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    transition: 0.4s;
+    background: linear-gradient(transparent,#fff);
+}
+.navigation.sticky{
+    background: #fff;
+    padding: 20px 50px;
+}
+.navTitle{
+    display: block;
+    user-select: none;
+    cursor: pointer;
+}
+.navTitle img{
+    width: 100px;
+}
+.toggle{
+    position: relative;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+}
+.toggle::before{
+    content:"Menu";
+    font-size: 20px;
+    color: #000;
+}
+.toggle.active::before{
+    content: "Close";
+}
+.toggle span{
+    position: relative;
+    width: 20px;
+    height: 10px;
+    margin: 10px;
+}
+.toggle span::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: .4s;
+    background: #000;
+}
+.toggle span::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transition: .4s;
+    
+}
+.toggle.active span::before{
+    top: 4px;
+    rotate: 230deg;
+}
+.toggle.active span::after{
+    rotate: -230deg;
+    bottom: 4px;
+}
+.navMenu {
+    width: 50%;
+}
+.menuList{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 0;
+}
+.menuList a{
+    font-size: 20px;
+    background: none;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    width: auto;
+}
+.menuList a:hover{
+    border-color: rgb(192, 192, 192);
+}
+.menuList a:last-child{
+    border-color: rgb(192, 192, 192);
+    background: rgb(192, 192, 192);
+}
+.menuList a:last-child:hover{
+    background: none;
+    border-color: rgb(192, 192, 192);
+}
+.menuList a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+                    /* Media Quarys  */
+
+
+@media screen and (max-width: 500px) {
+    .navTitle{
+        display: none;
+    }
+    .navigation{
+        justify-content: center;
+        padding: 40px 0;
+    }
+    .toggle{
+        justify-content: center !important;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .container{
+        padding: 50px 0px;
+    }
+    .toggle{
+        display: flex;
+    }
+    .menuList{
+        top: 100px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 250px;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation.sticky .menuList{
+        top:70px;
+    }
+    .menuList a{
+        font-size: 20px;
+        background: linear-gradient(#fff);
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s;
+        padding: 15px;
+        transition-delay: calc(0.09s * var(--menu-value));
+    }
+    .navigation.sticky .menuList a{
+        background: linear-gradient(to bottom,rgba(255, 255, 255, 0.199),#222);
+    }
+    .menuList a{
+        text-decoration: none;
+        color: #000;
+    }
+    .navigation.active .menuList a{
+        visibility: visible;
+        opacity: 1;
+    }
+    .menuList a:last-child{
+        background: linear-gradient(to bottom,rgba(255, 255, 255, 0.199),rgba(0, 0, 0, 0.801));
+    }
+    .menuList a:last-child:hover{
+        background: linear-gradient(to bottom,rgba(255, 255, 255, 0.199),rgba(0, 0, 0, 0.801));
+    }
+}
+
+
+
+@media screen and (max-width: 930px){
+    .toggle{
+        display: flex;
+        justify-content: right;
+    }
+    .menuList{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 250px;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation.sticky .menuList{
+        top:70px;
+    }
+    .menuList a{
+        list-style: none;
+        font-size: 20px;
+        background: linear-gradient(transparent,#fff,#fff);
+        transition: .5s;
+        padding: 15px;
+        transition-delay: calc(0.09s * var(--menu-value));
+        transform: translateX(-500px);
+        visibility: hidden;
+        opacity: 0;
+    }
+    .navigation.sticky .menuList a{
+        background: linear-gradient(to bottom,rgba(255, 255, 255, 0.199),#222);
+        top: 70px;
+    }
+    .navigation.sticky .menuList a:last-child{
+        background: linear-gradient(to bottom,rgba(255, 255, 255, 0.199),rgba(0, 0, 0, 0.801));
+    }
+    .menuList a{
+        text-decoration: none;
+        color: #000;
+    }
+    .navigation.active .menuList a{
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+    .navigation.active .menuList{
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .menuList a{
+        border: none;
+    }
+    .menuList a:hover{
+        border: none;
+        scale: 1.1;
+    }
+    .menuList a:last-child{
+        background: linear-gradient(transparent,#fff,#fff);
+    }
+    .menuList a:last-child:hover{
+        background: linear-gradient(transparent,#fff,#fff);
+    }
+}
+@media screen and (min-width: 930px){
+    .toggle{
+        display: none;
+    }
+    .menuList a{
+        padding: 10px 20px;
+    }
+    .navigation.sticky .menuList a:last-child{
+        background: none;
+    }
+}
+@media screen and (min-width: 1050px) {
+    .toggle{
+        display: none;
+    }
+    .menuList a{
+        padding: 10px 30px;
+    }
+}
