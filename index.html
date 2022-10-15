@@ -48,7 +48,7 @@
             >
               <a
                 href="#home"
-                class="bg-white md:border-gray-200 border-white border-2 px-14 py-3 md:px-8 md:py-3.5 text-2xl md:rounded-xl hover:bg-gray-300 hover:text-white duration-700 text-center select-none"
+                class="bg-white md:border-gray-200 border-white border-2 px-14 py-4 md:px-8 md:py-3.5 text-2xl md:rounded-xl hover:bg-gray-300 hover:text-white duration-700 text-center select-none"
                 >Home</a
               >
               <hr />
@@ -59,9 +59,15 @@
               >
               <hr />
               <a
+                href="#order"
+                class="bg-white md:border-gray-200 border-white border-2 px-14 py-5 md:px-8 md:py-3.5 text-2xl md:rounded-xl hover:bg-gray-300 hover:text-white duration-700 text-center select-none" id="order" 
+                >Orders</a
+              >
+              <hr />
+              <a
                 href="#contact"
-                class="bg-white md:border-gray-200 border-white border-2 px-14 py-4 md:px-8 md:py-3.5 text-2xl md:rounded-xl hover:bg-gray-300 hover:text-white rounded-b-xl duration-700 text-center select-none"
-                >Contact</a
+                class="bg-white md:border-gray-200 border-white border-2 px-14 py-5 md:px-8 md:py-3.5 text-2xl md:rounded-xl hover:bg-gray-300 hover:text-white rounded-b-xl duration-700 text-center select-none"
+                >Contacts</a
               >
             </div>
           </div>
@@ -110,7 +116,7 @@
               />
               <h2 class="food-name text-lg text-gray-500 pt-2">Burger</h2>
               <h3 class="price text-lg text-gray-500 pb-2">
-                <del>180</del> <span>150 TK</span>
+                <del>180</del> <span><span>150</span> TK</span>
               </h3>
               <button
                 class="cart text-lg bg-red-600 rounded-md px-3 py-2 w-full text-center text-white border-2 border-red-600 hover:bg-transparent hover:text-red-600 duration-700 active:bg-gray-300 select-none" onclick="addToCart(item1)"
@@ -127,7 +133,7 @@
               />
               <h2 class="food-name text-lg text-gray-500 pt-2">Pizza</h2>
               <h3 class="price text-lg text-gray-500 pb-2">
-                <del></del> <span>350 TK</span>
+                <del></del> <span><span>350</span> TK</span>
               </h3>
               <button
                 class="cart text-lg bg-red-600 rounded-md px-3 py-2 w-full text-center text-white border-2 border-red-600 hover:bg-transparent hover:text-red-600 duration-700 active:bg-gray-300 select-none" onclick="addToCart(item2)"
@@ -146,7 +152,7 @@
                 Chicken Biriyani
               </h2>
               <h3 class="price text-lg text-gray-500 pb-2">
-                <del></del> <span>220 TK</span>
+                <del></del> <span><span>220</span> TK</span>
               </h3>
               <button
                 class="cart text-lg bg-red-600 rounded-md px-3 py-2 w-full text-center text-white border-2 border-red-600 hover:bg-transparent hover:text-red-600 duration-700 active:bg-gray-300 select-none" onclick="addToCart(item3)"
@@ -165,7 +171,7 @@
                 Chicken Fried Rice
               </h2>
               <h3 class="price text-lg text-gray-500 pb-2">
-                <del></del> <span>120 TK</span>
+                <del></del> <span><span>120</span> TK</span>
               </h3>
               <button
                 class="cart text-lg bg-red-600 rounded-md px-3 py-2 w-full text-center text-white border-2 border-red-600 hover:bg-transparent hover:text-red-600 duration-700 active:bg-gray-300 select-none" onclick="addToCart(item4)"
@@ -184,7 +190,7 @@
                 Chicken Wings
               </h2>
               <h3 class="price text-lg text-gray-500 pb-2">
-                <del></del> <span>300 TK</span>
+                <del></del> <span><span>300</span> TK</span>
               </h3>
               <button
                 class="cart text-lg bg-red-600 rounded-md px-3 py-2 w-full text-center text-white border-2 border-red-600 hover:bg-transparent hover:text-red-600 duration-700 active:bg-gray-300 select-none" onclick="addToCart(item5)"
@@ -195,85 +201,85 @@
           </div>
         </div>
       </section>
-    </section>
-
-
-
-                              <!-- Contact section  -->
-
-
-    <section id="contact" class="w-full flex justify-center pt-28 bg-stone-700">
-      <div class="container">
-        <div class="contact flex flex-col flex-wrap md:flex-row">
-          <div class="contactLogo w-auto md:w-1/2 lg:w-1/4 py-5">
-            <img src="logo.png" class="w-60">
-          </div>
-          <div class="Available-Time w-auto text-white md:w-1/2 lg:w-1/4 pb-5">
-            <div class="contactTitle text-rose-500 font-black font-sans text-2xl py-5">Working Hours</div>
-            <ul class="list-disc px-10">
-              <li>
-                <h2 class="text-lg font-semibold">Saturday - Thursday</h2>
-                <h3 class="text-rose-500 font-medium">08:00 am - 09:00pm</h3>
-              </li>
-              <li>
-                <h2 class="font-semibold">Only Friday</h2>
-                <h3 class="text-rose-500 font-medium">03:00 pm - 09:00pm</h3>
-              </li>
-            </ul>
-          </div>
-          <div class="contactUs md:w-1/2 lg:w-1/4">
-            <div class="contactTitle text-rose-500 font-black font-sans text-2xl py-5">Contact Us</div>
-            <ul class="px-5 py-1">
-              <li class="flex">
-                <div class="contactIcons pr-2 text-xl">
-                  <i class="fa-solid fa-location-dot text-rose-500"></i>
-                </div>
-                <div class="contacts text-lg text-white font-normal">
-                  <h2>Location:</h2>
-                  <h3>Main Street, City</h3>
-                </div>
-              </li>
-            </ul>
-            <ul class="px-5 py-1">
-              <li class="flex">
-                <div class="contactIcons pr-2 text-xl">
-                  <i class="fa-solid fa-envelope text-rose-500"></i>
-                </div>
-                <div class="contacts contacts text-lg text-white font-normal">
-                  <h2>Email Address:</h2>
-                  <h3>abcd@gmail.com</h3>
-                </div>
-              </li>
-            </ul>
-            <ul class="px-5 py-1">
-              <li class="flex">
-                <div class="contactIcons pr-2 text-xl">
-                  <i class="fa-solid fa-phone text-rose-500"></i>
-                </div>
-                <div class="contacts text-lg text-white font-normal">
-                  <h2>Phone Number:</h2>
-                  <h3>+0881700000000</h3>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="Gallery md:w-1/2 lg:w-1/4">
-            <h2 class="text-2xl font-bold text-rose-500 py-5">Gallery</h2>
-            <div class="px-5 flex flex-wrap justify-between">
-              <img src="burger.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
-              <img src="chicken-fried-rice.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
-              <img src="chicken-biriyani.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
-              <img src="chicken-wings.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
-              <img src="pasta.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
-              <img src="pizza.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+  
+  
+  
+                                <!-- Contact section  -->
+  
+  
+      <section id="contact" class="w-full flex justify-center pt-28 bg-stone-700">
+        <div class="container">
+          <div class="contact flex flex-col flex-wrap md:flex-row">
+            <div class="contactLogo w-auto md:w-1/2 lg:w-1/4 py-5">
+              <img src="logo.png" class="w-60">
+            </div>
+            <div class="Available-Time w-auto text-white md:w-1/2 lg:w-1/4 pb-5">
+              <div class="contactTitle text-rose-500 font-black font-sans text-2xl py-5">Working Hours</div>
+              <ul class="list-disc px-10">
+                <li>
+                  <h2 class="text-lg font-semibold">Saturday - Thursday</h2>
+                  <h3 class="text-rose-500 font-medium">08:00 am - 09:00pm</h3>
+                </li>
+                <li>
+                  <h2 class="font-semibold">Only Friday</h2>
+                  <h3 class="text-rose-500 font-medium">03:00 pm - 09:00pm</h3>
+                </li>
+              </ul>
+            </div>
+            <div class="contactUs md:w-1/2 lg:w-1/4">
+              <div class="contactTitle text-rose-500 font-black font-sans text-2xl py-5">Contact Us</div>
+              <ul class="px-5 py-1">
+                <li class="flex">
+                  <div class="contactIcons pr-2 text-xl">
+                    <i class="fa-solid fa-location-dot text-rose-500"></i>
+                  </div>
+                  <div class="contacts text-lg text-white font-normal">
+                    <h2>Location:</h2>
+                    <h3>Main Street, City</h3>
+                  </div>
+                </li>
+              </ul>
+              <ul class="px-5 py-1">
+                <li class="flex">
+                  <div class="contactIcons pr-2 text-xl">
+                    <i class="fa-solid fa-envelope text-rose-500"></i>
+                  </div>
+                  <div class="contacts contacts text-lg text-white font-normal">
+                    <h2>Email Address:</h2>
+                    <h3>abcd@gmail.com</h3>
+                  </div>
+                </li>
+              </ul>
+              <ul class="px-5 py-1">
+                <li class="flex">
+                  <div class="contactIcons pr-2 text-xl">
+                    <i class="fa-solid fa-phone text-rose-500"></i>
+                  </div>
+                  <div class="contacts text-lg text-white font-normal">
+                    <h2>Phone Number:</h2>
+                    <h3>+0881700000000</h3>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="Gallery md:w-1/2 lg:w-1/4">
+              <h2 class="text-2xl font-bold text-rose-500 py-5">Gallery</h2>
+              <div class="px-5 flex flex-wrap justify-between">
+                <img src="burger.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+                <img src="chicken-fried-rice.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+                <img src="chicken-biriyani.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+                <img src="chicken-wings.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+                <img src="pasta.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+                <img src="pizza.jpg" class="w-24 h-36 py-5 lg:w-20 lg:h-28 lg:py-2">
+              </div>
             </div>
           </div>
+          <footer class="py-10 text-white text-lg font-semibold flex justify-center border-t-2 border-white m-5">
+            <h2>Copyright &copy; 2022 Food. All Rights Reserved.</h2>
+          </footer>
         </div>
-        <footer class="py-10 text-white text-lg font-semibold flex justify-center border-t-2 border-white m-5">
-          <h2>Copyright &copy; 2022 Food. All Rights Reserved.</h2>
-        </footer>
-      </div>
-    </section>
+      </section>
+      </section>
 
 
 
@@ -281,10 +287,31 @@
 
     <section
       id="cartMenu"
-      class="w-80 mx-auto bg-white h-full fixed top-28 right-0 rounded translate-x-96 duration-700 ease-linear flex flex-col align-center pb-28"
+      class="w-80 mx-auto bg-white h-full fixed top-28 right-0 rounded translate-x-full duration-700 ease-linear flex flex-col align-center pb-28"
     >
     <div class="text-3xl uppercase text-center p-10">Cart</div>
     <div id="title" class="overflow-y-scroll"></div>
   </section>
+
+
+                            <!-- Order section  -->
+
+
+  <section id="orderBody" class="-translate-x-full w-3/5 bg-white h-full fixed top-0 mt-28 duration-700 ease-linear md:w-1/2 lg:w-1/3">
+    <div class="mx-2 h-full">
+      <div class="title text-center text-2xl font-bold text-slate-800 py-2 border-2 flex flex-col mb-3">
+        <h2>Orders</h2>
+        <div class="flex justify-between px-2">
+          <p class="text-lg"><span id="orderNum">0</span> items</p>
+          <p class="text-lg">Total : <span id="totalAmount">0</span> TK</p>
+        </div>
+      </div>
+      <div class="orderItems"></div>
+    </div>
+  </section>
+
+
+
+
   </body>
 </html>
