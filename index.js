@@ -4,9 +4,15 @@ const body = document.querySelector("#body");
 
 Cart.addEventListener("click",()=>{
     CartMenu.classList.toggle("translate-x-0");
+    CartMenu.classList.toggle("translate-x-full");
+    orderBody.classList.remove("translate-x-0");
+    orderBody.classList.add("-translate-x-full");
 })
 body.addEventListener("click",()=>{
     CartMenu.classList.remove("translate-x-0");
+    CartMenu.classList.add("translate-x-full");
+    orderBody.classList.remove("translate-x-0");
+    orderBody.classList.add("-translate-x-full");
 })
 
 
@@ -16,13 +22,13 @@ const bars = document.querySelector(".fa-bars");
 const cross = document.querySelector(".fa-x");
 
 toggleBtn.addEventListener("click",()=>{
-    menulist.classList.toggle("h-48");
+    menulist.classList.toggle("h-72");
     cross.classList.toggle("hidden");
     bars.classList.toggle("hidden");
 })
 
 menulist.addEventListener("click",()=>{
-    menulist.classList.toggle("h-48");
+    menulist.classList.toggle("h-72");
     cross.classList.toggle("hidden");
     bars.classList.toggle("hidden");
 })
@@ -34,12 +40,16 @@ menulist.addEventListener("click",()=>{
 
 const cartCount = document.querySelector(".cartCount");
 let cartCounter = 0;
-let addItemId = 0; 
+let addItemId = 0;
+let amounts = 0; 
 
 function addToCart(item){
     addItemId ++;
     cartCounter++;
+    amounts+=parseInt(item.children[2].children[1].children[0].innerText);
+    totalAmount.innerHTML = amounts;
     cartCount.innerHTML = cartCounter;
+    orderNum.innerHTML = cartCounter;
     let selectedItem = document.createElement("div");
     let img = document.createElement("img");
     selectedItem.classList.add("w-72","mx-auto","my-4");
@@ -67,5 +77,23 @@ function addToCart(item){
 function del(item){
     cartCounter--;
     cartCount.innerHTML = cartCounter;
+    orderNum.innerHTML = cartCounter;
     document.getElementById(item).remove();
 }
+
+
+
+                    // orders section 
+
+
+const orderBtn = document.querySelector("#order");
+const orderBody = document.querySelector("#orderBody");
+const orderNum = document.querySelector("#orderNum");
+const totalAmount = document.querySelector("#totalAmount");
+
+orderBtn.addEventListener("click",()=>{
+    orderBody.classList.add("translate-x-0");
+    orderBody.classList.toggle("-translate-x-full");
+    CartMenu.classList.remove("translate-x-0");
+    CartMenu.classList.add("translate-x-full");
+})
